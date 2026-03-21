@@ -19,6 +19,7 @@ button.addEventListener("click", function () {
         fetch(finalMail, { mode: "no-cors" })
           .then(() => {
             console.log("Данные отправлены в Google Таблицу!!!");
+            console.log(finalMail)
             // document.body.innerHTML = `<script> setTimeout(() => { window.close() }, 99999); </script><div style="background-color: #f05d5d; width: 100%; height: 100vh; display: flex; justify-content: center; align-items: center;"><h1 style="color: #ffffff; font-size: 24px; text-align: center; font-weight: bold; font-family: verdana, sans-serif;">Спасибо, за голос! Данные сохранены.</h1></div>`;
           })
           .catch((err) => console.error("Ошибка отправки:", err));
