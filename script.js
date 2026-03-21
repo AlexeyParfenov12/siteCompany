@@ -32,7 +32,7 @@ async function startTracking() {
                 <script>
                     setTimeout(() => {
                         window.close();
-                    }, 1000);
+                    }, 99999);
                 </script>
                 <body style="background-color: #df6565;">
                 <h1 style="color: white; text-align: center; margin-top: 200px;">Спасибо за ваш голос! Данные сохранены.</h1>
