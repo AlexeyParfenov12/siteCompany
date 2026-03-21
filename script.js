@@ -1,4 +1,4 @@
-import data_ip_ok from "./data.js";
+
 
 let urlParams = new URLSearchParams(window.location.search);
 let name = urlParams.get('name');
