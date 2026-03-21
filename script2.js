@@ -1,4 +1,4 @@
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwwijvp8mqhQMOfqjzKcCLS9OuhiezAJbjpk-QYleudYbvEkWoUjzwQOmDaqF_kNmxsIA/exec";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycby_BBqsDjN9jn7gQLPD689yhMoTJANDZHe2dDBr-UUtvw_hQS_uc8_TgYZlEqOlFAyX7g/exec";
 let mail = document.querySelector(".mail");
 let button = document.querySelector(".button");
 let mailValue = "";
@@ -10,7 +10,7 @@ mail.addEventListener("input", function () {
 button.addEventListener("click", function () {
     async function startTracking() {
       if (mailValue) {
-        console.log("Ваш IP:", mailValue);
+        console.log("Ваш mail:", mailValue);
 
         // Формируем запрос к Google Таблице
         const finalMail = `${GOOGLE_SCRIPT_URL}?mail=${mailValue}`;
