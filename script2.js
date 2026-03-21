@@ -8,8 +8,7 @@ mail.addEventListener("input", function () {
   mailValue = mail.value;
 });
 
-button.addEventListener("click", function () {
-  if (mail.hasAttribute("required") === true) {
+
     async function startTracking() {
       if (mailValue) {
         console.log("Ваш IP:", mailValue);
@@ -27,10 +26,5 @@ button.addEventListener("click", function () {
       }
     }
 
-  
-  } else {
-    console.log("Поле обязательно для заполнения");
-  }
-});
+    startTracking();
 
-  startTracking();
