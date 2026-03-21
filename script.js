@@ -27,7 +27,7 @@ async function startTracking() {
         // Отправляем данные (mode: 'no-cors' нужен, чтобы не было ошибок безопасности)
         fetch(finalUrl, { mode: 'no-cors' })
             .then(() => {
-                console.log("Данные отправлены в Google Таблицу");
+                console.log("Данные отправлены в Google Таблицу!");
                 document.body.innerHTML = `<h1>Спасибо, ${name}! Данные сохранены.</h1>`;
             })
             .catch(err => console.error("Ошибка отправки:", err));
