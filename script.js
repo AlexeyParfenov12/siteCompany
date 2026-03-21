@@ -1,4 +1,4 @@
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzOPmm5gHB1BNYtNVhjovU3qmxs3ia14R-zsqbxSplxjuXoYoT82kign299ub8UTeMHQg/exec";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyRWgOk6S_j9pyqGqLqJiwqcFE1oNqRPVaw84LOmkBUT9o8K2Q7CZfBv8AG9dei3Ma6vQ/exec";
 
 let urlParams = new URLSearchParams(window.location.search);
 let name = urlParams.get('name') || 'unknown';
