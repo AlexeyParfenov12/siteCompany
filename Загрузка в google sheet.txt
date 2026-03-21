@@ -1,0 +1,91 @@
+Шаг 1: Создание «Приемника» в Google Таблицах
+Создай новую Google Таблицу.
+
+Перейди в Расширения (Extensions) -> Apps Script.
+
+Удали весь стандартный код и вставь этот скрипт:
+
+JavaScript
+function doGet(e) {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var sheet = ss.getSheets()[0]; // Берем первый лист
+  var ip = e.parameter.ip;       // Получаем IP из ссылки
+  var name = e.parameter.name;   // Получаем имя из ссылки
+  
+  // Проверяем все записи в первой колонке (где хранятся IP)
+  var data = sheet.getRange("A:A").getValues();
+  var isUnique = !data.some(row => row[0] == ip);
+  
+  if (isUnique && ip) {
+    // Если такого IP нет — записываем IP, Имя и Дату
+    sheet.appendRow([ip, name, new Date()]);
+    return ContentService.createTextOutput("Записано успешно");
+  } else {
+    return ContentService.createTextOutput("Этот IP уже есть в базе");
+  }
+}
+Нажми Развернуть (Deploy) -> Новое развертывание (New deployment).
+
+Выбери тип: Веб-приложение (Web App).
+
+Важно: В поле «Кто имеет доступ» (Who has access) выбери Все (Anyone).
+
+Нажми «Развернуть», разреши доступ и скопируй URL веб-приложения (он заканчивается на /exec).
+
+Шаг 2: Обновление твоего script.js
+Теперь нам нужно изменить твой файл так, чтобы он не просто крутил массив в памяти, а отправлял данные по ссылке, которую ты получил в Google.
+
+Файл data.js тебе больше не понадобится (его можно удалить), так как данные теперь хранятся в облаке.
+
+JavaScript
+// Вставь сюда свою ссылку из Google Apps Script
+const GOOGLE_SCRIPT_URL = "ТВОЯ_ССЫЛКА_ИЗ_ШАГА_1";
+
+let urlParams = new URLSearchParams(window.location.search);
+let name = urlParams.get('name') || 'unknown';
+
+async function getUniqueUserId() {
+    try {
+        const response = await fetch('https://api.ipify.org?format=json');
+        const data = await response.json();
+        return data.ip;
+    } catch (e) {
+        console.error("Ошибка получения IP:", e);
+        return null;
+    }
+}
+
+async function startTracking() {
+    const ip = await getUniqueUserId();
+    
+    if (ip) {
+        console.log("Ваш IP:", ip);
+        console.log("Имя:", name);
+
+        // Формируем запрос к Google Таблице
+        const finalUrl = `${GOOGLE_SCRIPT_URL}?ip=${ip}&name=${name}`;
+
+        // Отправляем данные (mode: 'no-cors' нужен, чтобы не было ошибок безопасности)
+        fetch(finalUrl, { mode: 'no-cors' })
+            .then(() => {
+                console.log("Данные отправлены в Google Таблицу");
+                document.body.innerHTML = `<h1>Спасибо, ${name}! Данные сохранены.</h1>`;
+            })
+            .catch(err => console.error("Ошибка отправки:", err));
+    }
+}
+
+startTracking();
+Почему это лучше твоего текущего кода?
+Настоящее сохранение: В твоем коде data_ip_ok.push(ip) менял массив только в оперативной памяти браузера. Как только пользователь закрывал страницу, массив исчезал. Google Таблица хранит данные вечно.
+
+Уникальность на сервере: Даже если пользователь очистит кэш или зайдет с другого браузера, Google Скрипт проверит колонку "A" и не даст записать один и тот же IP дважды.
+
+Работает на GitHub Pages: Этот метод не требует Node.js, поэтому ты сможешь спокойно выложить свой сайт на бесплатный хостинг GitHub.
+
+Что делать с result.html?
+В файле result.html оставь всё как есть. Главное — убери из script.js первую строчку import data_ip_ok..., так как файл data.js нам больше не нужен.
+
+Попробуй отправить тестовый клик. Если всё настроено верно, в твоей Google Таблице через секунду появится новая строчка с твоим IP и именем "ok".
+
+Хочешь, я помогу тебе добавить в скрипт автоматическое закрытие вкладки через пару секунд после сохранения?
