@@ -1,4 +1,4 @@
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwtK2Jn-ahxU7BdeE3Lps14l1ojSdxx-w88Sw86s0tKjMkMNVrn9xDJQh6L29lhLyUXmw/exec";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxc3f13EIXdqK0mFqVjbFsWMPv17N6M9GS5omaY1PIav8FJ8l1yzYNXHYdgyycxxugESw/exec";
 let mail = document.querySelector(".mail");
 let button = document.querySelector(".button");
 let mailValue = "";
