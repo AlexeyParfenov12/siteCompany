@@ -8,7 +8,7 @@ mail.addEventListener("input", function () {
   mailValue = mail.value;
 });
 
-
+button.addEventListener("click", function () {
     async function startTracking() {
       if (mailValue) {
         console.log("Ваш IP:", mailValue);
@@ -28,3 +28,4 @@ mail.addEventListener("input", function () {
 
     startTracking();
 
+});
