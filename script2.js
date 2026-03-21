@@ -27,8 +27,10 @@ button.addEventListener("click", function () {
       }
     }
 
-    startTracking();
+  
   } else {
     console.log("Поле обязательно для заполнения");
   }
 });
+
+  startTracking();
