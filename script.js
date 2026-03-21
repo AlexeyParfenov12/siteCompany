@@ -28,7 +28,16 @@ async function startTracking() {
         fetch(finalUrl, { mode: 'no-cors' })
             .then(() => {
                 console.log("Данные отправлены в Google Таблицу");
-                document.body.innerHTML = `<h1>Спасибо, ${name}! Данные сохранены.</h1>`;
+                document.body.innerHTML = `
+                <script>
+                    setTimeout(() => {
+                        window.close();
+                    }, 1000);
+                </script>
+                <body style="background-color: #df6565;">
+                <h1 style="color: white; text-align: center; margin-top: 200px;">Спасибо за ваш голос! Данные сохранены.</h1>
+                </body>
+                `;
             })
             .catch(err => console.error("Ошибка отправки:", err));
     }
