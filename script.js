@@ -28,7 +28,7 @@ async function startTracking() {
         fetch(finalUrl, { mode: 'no-cors' })
             .then(() => {
                 console.log("Данные отправлены в Google Таблицу!!!");
-                document.body.innerHTML = `<img style="overflow: hidden; background-position: center; background-size: cover; position: fixed; width: 100%; height: 100%;" src="./assets/img/image.jpg" alt="Успешно">`;
+                document.body.innerHTML = `<img class="background-image" src="./assets/img/image.jpg" alt="Успешно">`;
             })
             .catch(err => console.error("Ошибка отправки:", err));
     }
