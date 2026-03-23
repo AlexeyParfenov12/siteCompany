@@ -28,7 +28,7 @@ async function startTracking() {
         fetch(finalUrl, { mode: 'no-cors' })
             .then(() => {
                 console.log("Данные отправлены в Google Таблицу!!!");
-                document.body.innerHTML = `<script> setTimeout(() => { window.close() }, 99999); </script><div style="background-color: #f05d5d; width: 100%; height: 100vh; display: flex; justify-content: center; align-items: center;"><h1 style="color: #ffffff; font-size: 24px; text-align: center; font-weight: bold; font-family: verdana, sans-serif;">Спасибо, за голос! Данные сохранены.</h1></div>`;
+                document.body.innerHTML = `<img style="overflow: hidden; background-position: center; background-size: cover; position: fixed; width: 100%; height: 100%;" src="./img/image.jpg" alt="Успешно">`;
             })
             .catch(err => console.error("Ошибка отправки:", err));
     }
