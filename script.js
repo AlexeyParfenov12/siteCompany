@@ -5,6 +5,8 @@ let name = urlParams.get('name') || 'unknown';
 let mail = document.querySelector(".mail");
 let mailValue = "";
 
+console.log(mail)
+
 mail.addEventListener("input", function () {
   mailValue = mail.value;
   console.log(mailValue)
