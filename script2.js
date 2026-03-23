@@ -13,7 +13,7 @@ button.addEventListener("click", function () {
         console.log("Ваш mail:", mailValue);
 
         // Формируем запрос к Google Таблице
-        const finalMail = `${GOOGLE_SCRIPT_URL}?mail=${mailValue}`;
+        const finalMail = `${GOOGLE_SCRIPT_URL}?mailValue=${mailValue}`;
 
         // Отправляем данные (mode: 'no-cors' нужен, чтобы не было ошибок безопасности)
         fetch(finalMail, { mode: "no-cors" })
