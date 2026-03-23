@@ -1,72 +1,86 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <base target="_top">
+  <head>
+    <base target="_top" />
+    <link rel="stylesheet" href="./assets/style/style.css" />
     <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background-color: #ff8181;
-        }
-        section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background-color: #ff8181;
-            width: 70%;
-            background-color: #ffffff;
-            padding: 10px;
-            margin: 20px;
-            border-radius: 20px;
-        }
-        p {
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            font-size: 20px;
-            text-align: center;
-            opacity: 1;
-        }
-        #count {
-            font-weight: bold;
-            color: red;
-        }
-        .button-info {
-            color: green;
-        }
-        input {
-            width: 60%;
-            padding: 12px 20px;
-            margin: 8px 0;
-            box-sizing: border-box;
-            border-radius: 10px;
-            height: 50px;
-            font-size: 20px;
-        }
-        button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            padding: 12px 20px;
-            margin: 8px 0;
-            box-sizing: border-box;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            cursor: pointer;
-            border-radius: 10px;
-            width: 20%;
-        }
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #f9f9f9;
+      }
+      section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #f9f9f9;
+        width: 70%;
+        padding: 10px;
+        margin: 20px;
+        border-radius: 20px;
+      }
+      p {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 20px;
+        text-align: center;
+        opacity: 1;
+      }
+      #count {
+        font-weight: bold;
+        color: red;
+      }
+      .button-info {
+        color: green;
+      }
+      input {
+        width: 60%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border-radius: 10px;
+        height: 50px;
+        font-size: 20px;
+      }
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 10px;
+        width: 20%;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Статистика заказов</h2>
+
+      <div class="stats-box">
+        <p>Заказываю: <span id="order-count" class="count"></span></p>
+      </div>
+      <div class="stats-box">
+        <p>Не заказываю: <span id="no-order-count" class="count"></span></p>
+      </div>
+      <div class="stats-box">
+        <p>Подумаю: <span id="think-count" class="count"></span></p>
+      </div>
+    </div>
     <section>
-        <p>Введите ваш email:</p>
-        <input type="email" class="mail" required>
-        <button type="submit" class="button">Отправить</button>
+      <p>Введите ваш email:</p>
+      <input type="email" class="mail" required />
+      <button type="submit" class="button">Отправить</button>
     </section>
     <script src="script2.js"></script>
-</body>
+    <script></script>
+  </body>
 </html>
