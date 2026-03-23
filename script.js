@@ -3,7 +3,6 @@ const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwJHeAh74-LX3
 let urlParams = new URLSearchParams(window.location.search);
 let name = urlParams.get('name') || 'unknown';
 let mail = document.querySelector(".mail");
-let button = document.querySelector(".button");
 let mailValue = "";
 
 mail.addEventListener("input", function () {
@@ -21,7 +20,7 @@ async function getUniqueUserId() {
     }
 }
 
-button.addEventListener("click", function () {
+
 async function startTracking() {
     const ip = await getUniqueUserId();
     
@@ -44,4 +43,3 @@ async function startTracking() {
 }
 
 startTracking();
-});
