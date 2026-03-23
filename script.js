@@ -7,7 +7,10 @@ let mailValue = "";
 
 mail.addEventListener("input", function () {
   mailValue = mail.value;
+  console.log(mailValue)
 });
+
+
 
 async function getUniqueUserId() {
     try {
