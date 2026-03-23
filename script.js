@@ -2,15 +2,7 @@ const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwJHeAh74-LX3
 
 let urlParams = new URLSearchParams(window.location.search);
 let name = urlParams.get('name') || 'unknown';
-let mail = document.querySelector(".mail");
-let mailValue = "";
-
-console.log(mail)
-
-mail.addEventListener("input", function () {
-  mailValue = mail.value;
-  console.log(mailValue)
-});
+let mailValue = urlParams.get('mail') || 'unknown';
 
 
 
