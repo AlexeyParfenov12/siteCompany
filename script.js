@@ -4,7 +4,13 @@ let urlParams = new URLSearchParams(window.location.search);
 let name = urlParams.get('name') || 'unknown';
 let mailValue = urlParams.get('mail') || 'unknown';
 
-
+if(name === 'order'){
+    name = 'Заказываю';
+}else if(name === 'noOrder'){
+    name = 'Не заказываю';
+}else if(name === 'task'){
+    name = 'Подумаю';
+}
 
 async function getUniqueUserId() {
     try {
