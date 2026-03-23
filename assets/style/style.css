@@ -1,12 +1,16 @@
+
+@media (min-width: 768px) {
 .background-image {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 999;
   background-size: cover;
   background-image: url("../img/image.jpg");
-}
+}}
+
 
 @media (max-width: 768px) {
   .background-image {
@@ -15,8 +19,8 @@
     left: 0;
     width: 100%;
     height: 100%;
+    z-index: 999;
     background-size: cover;
-    z-index: -1;
     background-image: url("../img/image_mobile.jpg");
   }
 }
