@@ -55,7 +55,7 @@ let button = document.querySelector(".button");
 let mail = document.querySelector(".mail");
 let mailValue = "";
 
-button.disabled = false;
+button.disabled = true;
 
 if(name === 'order'){
     name = 'Заказываю';
@@ -65,14 +65,12 @@ if(name === 'order'){
     name = 'Подумаю';
 }
 
-mail.addEventListener("blur", function () {
-  mailValue = mail.value;
-  console.log("Почта:", mailValue);
+mail.addEventListener("input", function () {
+   mailValue = mail.value.trim();
+   button.disabled = !mail.validity.valid || !mailValue;
 });
 
-// if(mail.validity.typeMismatch){
-//     button.disabled = false  
-// }
+
 
 button.addEventListener("click", function () {
   startTracking();
