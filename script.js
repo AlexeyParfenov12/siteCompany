@@ -106,12 +106,12 @@ async function startTracking() {
     
     <div class="container">
         <header class="header">
-            <img src="./logo.png" class="logo" alt="Novatex">
+            <img src="./assets/img/logo.png" class="logo" alt="Novatex">
         </header>
         
         <main class="content">
             <h1 class="title">СПАСИБО,<br> ЗА ОБРАТНУЮ<br> СВЯЗЬ!</h1>
-            <img class="exc-mark" src="/image_exc.png" alt="!">
+            <img class="exc-mark" src="/assets/img/image_exc.png" alt="!">
         </main>
     </div>`;
             })
