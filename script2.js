@@ -33,17 +33,17 @@ button.addEventListener("click", function () {
 const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRp9ekx8RUc9Ybm_PdxzY9yvUx-5K_jRWz_x1MOY1n6ATcDRfKrYjxj-khfnMl2YYbLURjTUYzA6gYH/pub?gid=2146228962&single=true&output=csv";
 
 async function loadCSVData() {
-  const response = await fetch(CSV_URL);
-  const csvText = await response.text();
-  const rows = csvText.split("\n").map((row) => row.split(","));
-  function updateStats(rows) {
-  if (rows.length >= 3) {
-    document.getElementById('order-count').textContent = rows[0][1] || '0';
-    document.getElementById('no-order-count').textContent = rows[1][1] || '0';
-    document.getElementById('think-count').textContent = rows[2][1] || '0';
+  const responseCSV_URL = await fetch(CSV_URL);
+  const csvText_CSV_URL = await responseCSV_URL.text();
+  const rows_CSV_URL = csvText_CSV_URL.split("\n").map((row) => row.split(","));
+  function updateStats(rows_CSV_URL) {
+  if (rows_CSV_URL.length >= 3) {
+    document.getElementById('order-count').textContent = rows_CSV_URL[0][1] || '0';
+    document.getElementById('no-order-count').textContent = rows_CSV_URL[1][1] || '0';
+    document.getElementById('think-count').textContent = rows_CSV_URL[2][1] || '0';
   }
 }
-  updateStats(rows);
+  updateStats(rows_CSV_URL);
 }
 
 window.addEventListener("load", loadCSVData);
@@ -52,17 +52,17 @@ const CSV_URL_LIST_4 = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRp9ekx8
 
 let selectOrder = document.getElementById('order-list');
 async function loadCSVData1() {
-  const response = await fetch(CSV_URL_LIST_4);
-  const csvText = await response.text();
-  const rows = csvText.split("\n").map((row) => row.split(","));
-  function updateStats(rows) {
-  for (let i = 0; i < rows.length; i++) {
+  const response_CSV_URL_LIST_4 = await fetch(CSV_URL_LIST_4);
+  const csvText_CSV_URL_LIST_4 = await response_CSV_URL_LIST_4.text();
+  const rows_CSV_URL_LIST_4 = csvText_CSV_URL_LIST_4.split("\n").map((row) => row.split(","));
+  function updateStats(rows_CSV_URL_LIST_4) {
+  for (let i = 0; i < rows_CSV_URL_LIST_4.length; i++) {
     let itemOrder = document.createElement('li');
-    itemOrder.textContent = rows[i][1];
+    itemOrder.textContent = rows_CSV_URL_LIST_4[i][1];
     selectOrder.appendChild(itemOrder);
   }
 }
-  updateStats(rows);
+  updateStats(rows_CSV_URL_LIST_4);
 }
 
 
@@ -72,17 +72,17 @@ const CSV_URL_LIST_5 = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRp9ekx8
 
 let selectNotOrder = document.getElementById('not-order-list');
 async function loadCSVData2() {
-  const response = await fetch(CSV_URL_LIST_5);
-  const csvText = await response.text();
-  const rows = csvText.split("\n").map((row) => row.split(","));
-  function updateStats(rows) {
-  for (let i = 0; i < rows.length; i++) {
+  const response_CSV_URL_LIST_5 = await fetch(CSV_URL_LIST_5);
+  const csvText_CSV_URL_LIST_5 = await response_CSV_URL_LIST_5.text();
+  const rows_CSV_URL_LIST_5 = csvText_CSV_URL_LIST_5.split("\n").map((row) => row.split(","));
+  function updateStats(rows_CSV_URL_LIST_5) {
+  for (let i = 0; i < rows_CSV_URL_LIST_5.length; i++) {
     let itemNotOrder = document.createElement('li');
-    itemNotOrder.textContent = rows[i][1];
+    itemNotOrder.textContent = rows_CSV_URL_LIST_5[i][1];
     selectOrder.appendChild(itemNotOrder);
   }
 }
-  updateStats(rows);
+  updateStats(rows_CSV_URL_LIST_5);
 }
 
 
@@ -91,17 +91,17 @@ const CSV_URL_LIST_6 = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRp9ekx8
 
 let selectThink = document.getElementById('think-list');
 async function loadCSVData3() {
-  const response = await fetch(CSV_URL_LIST_6);
-  const csvText = await response.text();
-  const rows = csvText.split("\n").map((row) => row.split(","));
-  function updateStats(rows) {
-  for (let i = 0; i < rows.length; i++) {
-    let itemThik = document.createElement('li');
-    itemThik.textContent = rows[i][1];
+  const response_CSV_URL_LIST_6 = await fetch(CSV_URL_LIST_6);
+  const csvText_CSV_URL_LIST_6 = await response_CSV_URL_LIST_6.text();
+  const rows_CSV_URL_LIST_6 = csvText_CSV_URL_LIST_6.split("\n").map((row) => row.split(","));
+  function updateStats(rows_CSV_URL_LIST_6) {
+  for (let i = 0; i < rows_CSV_URL_LIST_6.length; i++) {
+    let itemThink = document.createElement('li');
+    itemThink.textContent = rows_CSV_URL_LIST_6[i][1];
     selectOrder.appendChild(itemThink);
   }
 }
-  updateStats(rows);
+  updateStats(rows_CSV_URL_LIST_6);
 }
 
 window.addEventListener("load", loadCSVData1);
