@@ -109,7 +109,7 @@ async function startTracking() {
         </header>
         <main class="content-info">
             <h1 class="title-info">СПАСИБО,<br> ЗА ОБРАТНУЮ<br> СВЯЗЬ!</h1>
-            <img class="exc-mark-info" src="/assets/img/image_exc.png" alt="!">
+            <img class="exc-mark-info" src="./assets/img/image_exc.png" alt="!">
         </main>
     </div>`;
             })
