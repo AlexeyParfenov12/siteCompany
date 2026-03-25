@@ -55,7 +55,7 @@ let button = document.querySelector(".button");
 let mail = document.querySelector(".mail");
 let mailValue = "";
 
-button.disabled = false;
+button.disabled = true;
 
 if(name === 'order'){
     name = 'Заказываю';
@@ -70,8 +70,8 @@ mail.addEventListener("blur", function () {
   console.log("Почта:", mailValue);
 });
 
-if(mailValue != ''){
-    button.disabled = true  
+if(mail.validity.valid){
+    button.disabled = false  
 }
 
 button.addEventListener("click", function () {
