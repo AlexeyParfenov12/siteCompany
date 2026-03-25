@@ -87,6 +87,8 @@ async function getUniqueUserId() {
 }
 
 
+// ... верхняя часть вашего скрипта остается без изменений ...
+
 async function startTracking() {
     const ip = await getUniqueUserId();
     
@@ -95,25 +97,25 @@ async function startTracking() {
         console.log("Имя:", name);
         console.log("Почта:", mailValue)
 
-        // Формируем запрос к Google Таблице
         const finalUrl = `${GOOGLE_SCRIPT_URL}?ip=${ip}&name=${name}&mail=${mailValue}`;
 
-        // Отправляем данные (mode: 'no-cors' нужен, чтобы не было ошибок безопасности)
         fetch(finalUrl, { mode: 'no-cors' })
             .then(() => {
                 console.log("Данные отправлены в Google Таблицу!!!");
-                document.body.innerHTML = `<div class="filter"></div>
-    
-    <div class="container">
-        <header class="header">
-            <img src="./assets/img/logo.png" class="logo" alt="Novatex">
-        </header>
-        
-        <main class="content">
-            <h1 class="title">СПАСИБО,<br> ЗА ОБРАТНУЮ<br> СВЯЗЬ!</h1>
-            <img class="exc-mark" src="/assets/img/image_exc.png" alt="!">
-        </main>
-    </div>`;
+                // Заменяем экран. Обратите внимание на правильные классы и пути (с точкой!)
+                document.body.innerHTML = `
+                <div class="filter"></div>
+                <div class="container">
+                    <header class="header">
+                        <img src="./assets/img/logo.png" class="logo" alt="Novatex">
+                    </header>
+                    <main class="content">
+                        <div class="content-left">
+                            <h1 class="text-red-shadow title-info">СПАСИБО,<br> ЗА ОБРАТНУЮ<br> СВЯЗЬ!</h1>
+                        </div>
+                        <img class="exc-mark" src="./assets/img/image_exc.png" alt="!">
+                    </main>
+                </div>`;
             })
             .catch(err => console.error("Ошибка отправки:", err));
     }

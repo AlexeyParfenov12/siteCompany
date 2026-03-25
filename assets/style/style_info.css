@@ -1,25 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 /* 1. БАЗОВЫЕ НАСТРОЙКИ */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-body {
-  font-family: "Montserrat", sans-serif;
-  background-image: url("/assets/img/texture.png");
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-  background-color: #888; /* Резервный цвет, если картинка не загрузится */
-  min-height: 100vh; /* Занимает всю высоту экрана */
-  overflow-x: hidden; /* Убирает горизонтальную прокрутку */
-}
 
 /* Затемняющий фильтр (увел его на задний план через z-index) */
-.filter {
+.filter-info {
   position: fixed;
   top: 0;
   left: 0;
@@ -31,7 +16,7 @@ body {
 }
 
 /* 2. ГЛАВНЫЙ КОНТЕЙНЕР */
-.container {
+.container-info {
   max-width: 1200px;
   margin: 0 auto; /* Центрирует контейнер на больших мониторах */
   padding: 40px;
@@ -41,17 +26,17 @@ body {
 }
 
 /* 3. ШАПКА И ЛОГОТИП */
-.header {
+.header-info {
   width: 100%;
   margin-bottom: 20px;
 }
-.logo {
+.logo-info {
   width: 200px; /* Размер логотипа на ПК */
   display: block;
 }
 
 /* 4. КОНТЕНТ (ПК ВЕРСИЯ - СТРОКА) */
-.content {
+.content-info {
   display: flex;
   flex-direction: row; /* Элементы в линию (слева направо) */
   align-items: center; /* Центрируем по вертикали */
@@ -60,7 +45,7 @@ body {
 }
 
 /* Настройки текста */
-.title {
+.title-info {
   font-weight: 700;
   line-height: 1.2em;
   text-transform: uppercase;
@@ -78,7 +63,7 @@ body {
 }
 
 /* Настройки картинки со знаком */
-.exc-mark {
+.exc-mark-info {
   width: 35%; /* Занимает 35% ширины экрана */
   max-width: 300px;
   height: auto;
@@ -88,33 +73,33 @@ body {
 /* 5. МОБИЛЬНАЯ ВЕРСИЯ (Включается при ширине < 768px) */
 /* ========================================= */
 @media (max-width: 768px) {
-  .container {
+  .container-info {
     padding: 20px;
   }
 
-  .header {
+  .header-info {
     display: flex;
     justify-content: center; /* Логотип по центру */
     margin-bottom: 40px;
   }
 
-  .logo {
+  .logo-info {
     width: 160px; /* Уменьшаем логотип */
   }
 
-  .content {
+  .content-info {
     flex-direction: column; /* Элементы в колонку (сверху вниз) */
     justify-content: center;
     text-align: center; /* Центрируем текст */
     gap: 40px; /* Расстояние между текстом и картинкой */
   }
 
-  .title {
+  .title-info {
     max-width: 100%;
     font-size: 9vw; /* Делаем шрифт крупнее для телефонов */
   }
 
-  .exc-mark {
+  .exc-mark-info {
     width: 35%; /* Знак становится крупнее относительно экрана телефона */
   }
 }

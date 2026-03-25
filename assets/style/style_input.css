@@ -19,7 +19,7 @@ body {
 }
 
 /* Затемняющий фильтр (увел его на задний план через z-index) */
-.filter {
+.filter-input {
   position: fixed;
   top: 0;
   left: 0;
@@ -31,7 +31,7 @@ body {
 }
 
 /* 2. ГЛАВНЫЙ КОНТЕЙНЕР */
-.container {
+.container-input {
   max-width: 1200px;
   margin: 0 auto; /* Центрирует контейнер на больших мониторах */
   padding: 40px;
@@ -41,11 +41,11 @@ body {
 }
 
 /* 3. ШАПКА И ЛОГОТИП */
-.header {
+.header-input {
   width: 100%;
   margin-bottom: 20px;
 }
-.logo {
+.logo-input {
   width: 200px; /* Размер логотипа на ПК */
   display: block;
 }
