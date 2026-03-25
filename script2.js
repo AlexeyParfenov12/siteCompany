@@ -79,7 +79,7 @@ async function loadCSVData2() {
   for (let i = 0; i < rows_CSV_URL_LIST_5.length; i++) {
     let itemNotOrder = document.createElement('li');
     itemNotOrder.textContent = rows_CSV_URL_LIST_5[i][1];
-    selectOrder.appendChild(itemNotOrder);
+    selectNotOrder.appendChild(itemNotOrder);
   }
 }
   updateStats(rows_CSV_URL_LIST_5);
@@ -98,7 +98,7 @@ async function loadCSVData3() {
   for (let i = 0; i < rows_CSV_URL_LIST_6.length; i++) {
     let itemThink = document.createElement('li');
     itemThink.textContent = rows_CSV_URL_LIST_6[i][1];
-    selectOrder.appendChild(itemThink);
+    selectThink.appendChild(itemThink);
   }
 }
   updateStats(rows_CSV_URL_LIST_6);
