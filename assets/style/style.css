@@ -160,7 +160,7 @@ body {
 }
 
 /* 2. ГЛАВНЫЙ КОНТЕЙНЕР */
-.container-input {
+.container {
   max-width: 1200px;
   margin: 0 auto; /* Центрирует контейнер на больших мониторах */
   padding: 40px;
@@ -170,11 +170,11 @@ body {
 }
 
 /* 3. ШАПКА И ЛОГОТИП */
-.header-input {
+.header {
   width: 100%;
   margin-bottom: 20px;
 }
-.logo-input {
+.logo {
   width: 200px; /* Размер логотипа на ПК */
   display: block;
 }
