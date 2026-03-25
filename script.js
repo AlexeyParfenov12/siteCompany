@@ -70,9 +70,9 @@ mail.addEventListener("blur", function () {
   console.log("Почта:", mailValue);
 });
 
-if(!mail.validity.typeMismatch){
-    button.disabled = false  
-}
+// if(mail.validity.typeMismatch){
+//     button.disabled = false  
+// }
 
 button.addEventListener("click", function () {
   startTracking();
