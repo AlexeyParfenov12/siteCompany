@@ -70,7 +70,7 @@ mail.addEventListener("blur", function () {
   console.log("Почта:", mailValue);
 });
 
-if(mail.validity.valid){
+if(!mail.validity.typeMismatch){
     button.disabled = false  
 }
 
