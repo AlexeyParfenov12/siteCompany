@@ -55,7 +55,7 @@ let button = document.querySelector(".button");
 let mail = document.querySelector(".mail");
 let mailValue = "";
 
-button.disabled = true;
+button.disabled = false;
 
 if(name === 'order'){
     name = 'Заказываю';
