@@ -5,10 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./assets/style/style.css">
+    <link rel="stylesheet" href="./assets/style/style_input.css">
+    <link rel="stylesheet" href="./assets/style/style_info.css">
 </head>
 <body style="margin: 0; padding: 0;">
-    <input type="email" class="mail" required placeholder="Введите ваш email"/>
-    <button type="submit" class="button" disabled>Отправить</button>
+    <div class="filter"></div>
+    
+    <div class="container">
+        <header class="header">
+            <img src="./logo.png" class="logo" alt="Novatex">
+        </header>
+        
+        <main class="content">
+            <div>
+                <h1 class="title">введите почту</h1>
+                <p class="paragraph">Почта поможет нам связаться с вами</p>
+                <div class="section-input">
+                    <input type="email" class="mail" required placeholder="Введите ваш email">
+                    <button style="margin-top: 10px;" disabled class="button">Отправить</button>
+                </div>
+                
+            </div>
+            
+            <img class="exc-mark" src="/image_exc.png" alt="!">
+        </main>
+    </div>
     <script type="module" src="script.js"></script>
 </body>
 </html>
+

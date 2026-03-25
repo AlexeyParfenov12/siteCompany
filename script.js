@@ -102,7 +102,18 @@ async function startTracking() {
         fetch(finalUrl, { mode: 'no-cors' })
             .then(() => {
                 console.log("Данные отправлены в Google Таблицу!!!");
-                document.body.innerHTML = `<img class="background-image" alt="Успешно">`;
+                document.body.innerHTML = `<div class="filter"></div>
+    
+    <div class="container">
+        <header class="header">
+            <img src="./logo.png" class="logo" alt="Novatex">
+        </header>
+        
+        <main class="content">
+            <h1 class="title">СПАСИБО,<br> ЗА ОБРАТНУЮ<br> СВЯЗЬ!</h1>
+            <img class="exc-mark" src="/image_exc.png" alt="!">
+        </main>
+    </div>`;
             })
             .catch(err => console.error("Ошибка отправки:", err));
     }

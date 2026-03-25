@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* 1. БАЗОВЫЕ НАСТРОЙКИ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-image: url("texture.png");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: #888; /* Резервный цвет, если картинка не загрузится */
+  min-height: 100vh; /* Занимает всю высоту экрана */
+  overflow-x: hidden; /* Убирает горизонтальную прокрутку */
+}
+
+/* Затемняющий фильтр (увел его на задний план через z-index) */
+.filter {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(80, 80, 80);
+  opacity: 0.2; /* Сделал прозрачнее, чтобы текстуру бетона было видно как на макете */
+  z-index: -1;
+}
+
+/* 2. ГЛАВНЫЙ КОНТЕЙНЕР */
+.container {
+  max-width: 1200px;
+  margin: 0 auto; /* Центрирует контейнер на больших мониторах */
+  padding: 40px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; /* Ставит шапку и контент друг под другом */
+}
+
+/* 3. ШАПКА И ЛОГОТИП */
+.header {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.logo {
+  width: 200px; /* Размер логотипа на ПК */
+  display: block;
+}
+
+/* 4. КОНТЕНТ (ПК ВЕРСИЯ - СТРОКА) */
+.content {
+  display: flex;
+  flex-direction: row; /* Элементы в линию (слева направо) */
+  align-items: center; /* Центрируем по вертикали */
+  justify-content: space-between; /* Раздвигаем по краям */
+  flex-grow: 1; /* Заставляет блок занять всё свободное место по высоте */
+}
+
+/* Настройки текста */
+.title {
+  font-weight: 700;
+  line-height: 1.2em;
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 7vw;
+  line-height: 1.2em;
+  color: transparent;
+  background-color: rgb(0, 0, 0);
+  text-shadow: 0px 3px 6px rgba(255, 0, 0, 0.7);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+}
+
+/* Настройки картинки со знаком */
+.exc-mark {
+  width: 35%; /* Занимает 35% ширины экрана */
+  max-width: 300px;
+  height: auto;
+}
+
+/* ========================================= */
+/* 5. МОБИЛЬНАЯ ВЕРСИЯ (Включается при ширине < 768px) */
+/* ========================================= */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  .header {
+    display: flex;
+    justify-content: center; /* Логотип по центру */
+    margin-bottom: 40px;
+  }
+
+  .logo {
+    width: 160px; /* Уменьшаем логотип */
+  }
+
+  .content {
+    flex-direction: column; /* Элементы в колонку (сверху вниз) */
+    justify-content: center;
+    text-align: center; /* Центрируем текст */
+    gap: 40px; /* Расстояние между текстом и картинкой */
+  }
+
+  .title {
+    max-width: 100%;
+    font-size: 9vw; /* Делаем шрифт крупнее для телефонов */
+  }
+
+  .exc-mark {
+    width: 35%; /* Знак становится крупнее относительно экрана телефона */
+  }
+}
