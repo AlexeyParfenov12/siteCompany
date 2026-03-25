@@ -51,7 +51,7 @@ window.addEventListener("load", loadCSVData);
 const CSV_URL_LIST_4 = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRp9ekx8RUc9Ybm_PdxzY9yvUx-5K_jRWz_x1MOY1n6ATcDRfKrYjxj-khfnMl2YYbLURjTUYzA6gYH/pub?gid=1290704733&single=true&output=csv";
 
 let selectOrder = document.getElementById('order-list');
-async function loadCSVData() {
+async function loadCSVData1() {
   const response = await fetch(CSV_URL_LIST_4);
   const csvText = await response.text();
   const rows = csvText.split("\n").map((row) => row.split(","));
@@ -65,4 +65,43 @@ async function loadCSVData() {
   updateStats(rows);
 }
 
-window.addEventListener("load", loadCSVData);
+window.addEventListener("load", loadCSVData1);
+
+
+const CSV_URL_LIST_5 = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRp9ekx8RUc9Ybm_PdxzY9yvUx-5K_jRWz_x1MOY1n6ATcDRfKrYjxj-khfnMl2YYbLURjTUYzA6gYH/pub?gid=1290704733&single=true&output=csv";
+
+let selectNotOrder = document.getElementById('not-order-list');
+async function loadCSVData2() {
+  const response = await fetch(CSV_URL_LIST_5);
+  const csvText = await response.text();
+  const rows = csvText.split("\n").map((row) => row.split(","));
+  function updateStats(rows) {
+  for (let i = 0; i < rows.length; i++) {
+    let itemNotOrder = document.createElement('li');
+    itemNotOrder.textContent = rows[i][1];
+    selectOrder.appendChild(itemNotOrder);
+  }
+}
+  updateStats(rows);
+}
+
+window.addEventListener("load", loadCSVData2);
+
+const CSV_URL_LIST_6 = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRp9ekx8RUc9Ybm_PdxzY9yvUx-5K_jRWz_x1MOY1n6ATcDRfKrYjxj-khfnMl2YYbLURjTUYzA6gYH/pub?gid=1290704733&single=true&output=csv";
+
+let selectThink = document.getElementById('think-list');
+async function loadCSVData3() {
+  const response = await fetch(CSV_URL_LIST_6);
+  const csvText = await response.text();
+  const rows = csvText.split("\n").map((row) => row.split(","));
+  function updateStats(rows) {
+  for (let i = 0; i < rows.length; i++) {
+    let itemThik = document.createElement('li');
+    itemThik.textContent = rows[i][1];
+    selectOrder.appendChild(itemThink);
+  }
+}
+  updateStats(rows);
+}
+
+window.addEventListener("load", loadCSVData3);
