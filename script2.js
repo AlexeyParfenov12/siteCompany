@@ -65,7 +65,7 @@ async function loadCSVData1() {
   updateStats(rows);
 }
 
-window.addEventListener("load", loadCSVData1);
+
 
 
 const CSV_URL_LIST_5 = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRp9ekx8RUc9Ybm_PdxzY9yvUx-5K_jRWz_x1MOY1n6ATcDRfKrYjxj-khfnMl2YYbLURjTUYzA6gYH/pub?gid=559894606&single=true&output=csv";
@@ -85,7 +85,7 @@ async function loadCSVData2() {
   updateStats(rows);
 }
 
-window.addEventListener("load", loadCSVData2);
+
 
 const CSV_URL_LIST_6 = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRp9ekx8RUc9Ybm_PdxzY9yvUx-5K_jRWz_x1MOY1n6ATcDRfKrYjxj-khfnMl2YYbLURjTUYzA6gYH/pub?gid=2042448798&single=true&output=csv";
 
@@ -104,4 +104,6 @@ async function loadCSVData3() {
   updateStats(rows);
 }
 
+window.addEventListener("load", loadCSVData1);
+window.addEventListener("load", loadCSVData2);
 window.addEventListener("load", loadCSVData3);
