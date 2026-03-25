@@ -48,16 +48,7 @@ body {
 
 
 
-.filter-info {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgb(80, 80, 80);
-  opacity: 0.2; 
-  z-index: -1;
-}
+
 
 /* 2. ГЛАВНЫЙ КОНТЕЙНЕР */
 .container-info {
