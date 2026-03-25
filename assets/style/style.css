@@ -48,7 +48,7 @@ body {
 
 
 
-/* .filter-info {
+.filter-info {
   position: fixed;
   top: 0;
   left: 0;
@@ -57,7 +57,7 @@ body {
   background: rgb(80, 80, 80);
   opacity: 0.2; 
   z-index: -1;
-} */
+}
 
 /* 2. ГЛАВНЫЙ КОНТЕЙНЕР */
 .container-info {
@@ -152,16 +152,12 @@ body {
 
 
 /* 1. БАЗОВЫЕ НАСТРОЙКИ */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
 
 
 
 /* Затемняющий фильтр (увел его на задний план через z-index) */
-.filter-input {
+.filter {
   position: fixed;
   top: 0;
   left: 0;

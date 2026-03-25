@@ -102,7 +102,7 @@ async function startTracking() {
         fetch(finalUrl, { mode: 'no-cors' })
             .then(() => {
                 console.log("Данные отправлены в Google Таблицу!!!");
-                document.body.innerHTML = `<div class="filter-info"></div>
+                document.body.innerHTML = `<div class="filter"></div>
     <div class="container-info">
         <header class="header-info">
             <img src="./assets/img/logo.png" class="logo-info" alt="Novatex">
