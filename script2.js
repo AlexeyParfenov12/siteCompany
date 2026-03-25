@@ -58,7 +58,7 @@ async function loadCSVData() {
   function updateStats(rows) {
   for (let i = 0; i < rows.length; i++) {
     let itemOrder = document.createElement('li');
-    itemOrder.textContent = rows[i][0];
+    itemOrder.textContent = rows[i][1];
     selectOrder.appendChild(itemOrder);
   }
 }
