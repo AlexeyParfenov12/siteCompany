@@ -12,6 +12,8 @@ if(name === 'order'){
     name = 'Подумаю';
 }
 
+
+
 async function getUniqueUserId() {
     try {
         const response = await fetch('https://api.ipify.org?format=json');

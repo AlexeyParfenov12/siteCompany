@@ -30,8 +30,7 @@ button.addEventListener("click", function () {
   startTracking();
 });
 
-const CSV_URL =
-  "https://docs.google.com/spreadsheets/d/e/2PACX-1vRp9ekx8RUc9Ybm_PdxzY9yvUx-5K_jRWz_x1MOY1n6ATcDRfKrYjxj-khfnMl2YYbLURjTUYzA6gYH/pub?gid=2146228962&single=true&output=csv";
+const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRp9ekx8RUc9Ybm_PdxzY9yvUx-5K_jRWz_x1MOY1n6ATcDRfKrYjxj-khfnMl2YYbLURjTUYzA6gYH/pub?gid=2146228962&single=true&output=csv";
 
 async function loadCSVData() {
   const responseCSV_URL = await fetch(CSV_URL);
@@ -52,16 +51,13 @@ async function loadCSVData() {
 
 window.addEventListener("load", loadCSVData);
 
-const CSV_URL_LIST_4 =
-  "https://docs.google.com/spreadsheets/d/e/2PACX-1vRp9ekx8RUc9Ybm_PdxzY9yvUx-5K_jRWz_x1MOY1n6ATcDRfKrYjxj-khfnMl2YYbLURjTUYzA6gYH/pub?gid=1290704733&single=true&output=csv";
+const CSV_URL_LIST_4 = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRp9ekx8RUc9Ybm_PdxzY9yvUx-5K_jRWz_x1MOY1n6ATcDRfKrYjxj-khfnMl2YYbLURjTUYzA6gYH/pub?gid=1290704733&single=true&output=csv";
 
 let selectOrder = document.getElementById("order-list");
 async function loadCSVData1() {
   const response_CSV_URL_LIST_4 = await fetch(CSV_URL_LIST_4);
   const csvText_CSV_URL_LIST_4 = await response_CSV_URL_LIST_4.text();
-  const rows_CSV_URL_LIST_4 = csvText_CSV_URL_LIST_4
-    .split("\n")
-    .map((row) => row.split(","));
+  const rows_CSV_URL_LIST_4 = csvText_CSV_URL_LIST_4.split("\n").map((row) => row.split(","));
 
   selectOrder.innerHTML = "";
 
@@ -77,16 +73,13 @@ async function loadCSVData1() {
 
 window.addEventListener("load", loadCSVData1);
 
-const CSV_URL_LIST_5 =
-  "https://docs.google.com/spreadsheets/d/e/2PACX-1vRp9ekx8RUc9Ybm_PdxzY9yvUx-5K_jRWz_x1MOY1n6ATcDRfKrYjxj-khfnMl2YYbLURjTUYzA6gYH/pub?gid=559894606&single=true&output=csv";
+const CSV_URL_LIST_5 ="https://docs.google.com/spreadsheets/d/e/2PACX-1vRp9ekx8RUc9Ybm_PdxzY9yvUx-5K_jRWz_x1MOY1n6ATcDRfKrYjxj-khfnMl2YYbLURjTUYzA6gYH/pub?gid=559894606&single=true&output=csv";
 
 let selectNotOrder = document.getElementById("not-order-list");
 async function loadCSVData2() {
   const response_CSV_URL_LIST_5 = await fetch(CSV_URL_LIST_5);
   const csvText_CSV_URL_LIST_5 = await response_CSV_URL_LIST_5.text();
-  const rows_CSV_URL_LIST_5 = csvText_CSV_URL_LIST_5
-    .split("\n")
-    .map((row) => row.split(","));
+  const rows_CSV_URL_LIST_5 = csvText_CSV_URL_LIST_5.split("\n").map((row) => row.split(","));
 
   selectNotOrder.innerHTML = "";
 
@@ -102,16 +95,13 @@ async function loadCSVData2() {
 
 window.addEventListener("load", loadCSVData2);
 
-const CSV_URL_LIST_6 =
-  "https://docs.google.com/spreadsheets/d/e/2PACX-1vRp9ekx8RUc9Ybm_PdxzY9yvUx-5K_jRWz_x1MOY1n6ATcDRfKrYjxj-khfnMl2YYbLURjTUYzA6gYH/pub?gid=2042448798&single=true&output=csv";
+const CSV_URL_LIST_6 ="https://docs.google.com/spreadsheets/d/e/2PACX-1vRp9ekx8RUc9Ybm_PdxzY9yvUx-5K_jRWz_x1MOY1n6ATcDRfKrYjxj-khfnMl2YYbLURjTUYzA6gYH/pub?gid=2042448798&single=true&output=csv";
 
 let selectThink = document.getElementById("think-list");
 async function loadCSVData3() {
   const response_CSV_URL_LIST_6 = await fetch(CSV_URL_LIST_6);
   const csvText_CSV_URL_LIST_6 = await response_CSV_URL_LIST_6.text();
-  const rows_CSV_URL_LIST_6 = csvText_CSV_URL_LIST_6
-    .split("\n")
-    .map((row) => row.split(","));
+  const rows_CSV_URL_LIST_6 = csvText_CSV_URL_LIST_6.split("\n").map((row) => row.split(","));
 
     selectThink.innerHTML = "";
 
