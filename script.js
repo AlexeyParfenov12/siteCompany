@@ -51,7 +51,8 @@ let name = urlParams.get('name') || 'unknown';
 
 // startTracking();
 
-
+let button = document.querySelector(".button");
+let mail = document.querySelector(".mail");
 let mailValue = "";
 
 if(name === 'order'){
@@ -62,10 +63,14 @@ if(name === 'order'){
     name = 'Подумаю';
 }
 
-if(mailValue === ''){
-    mailValue = 'unknown';
-    console.log("Почта:", mailValue)
-}else{
+mail.addEventListener("blur", function () {
+  mailValue = mail.value;
+  console.log("Почта:", mailValue);
+});
+
+button.addEventListener("click", function () {
+  startTracking();
+});
 async function getUniqueUserId() {
     try {
         const response = await fetch('https://api.ipify.org?format=json');
@@ -99,6 +104,5 @@ async function startTracking() {
     }
 }
 
-startTracking();
+// startTracking();
 
-}
