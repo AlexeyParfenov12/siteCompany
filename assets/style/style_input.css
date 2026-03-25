@@ -7,16 +7,7 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: "Montserrat", sans-serif;
-  background-image: url("./assets/img/texture.png");
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-  background-color: #888; /* Резервный цвет, если картинка не загрузится */
-  min-height: 100vh; /* Занимает всю высоту экрана */
-  overflow-x: hidden; /* Убирает горизонтальную прокрутку */
-}
+
 
 /* Затемняющий фильтр (увел его на задний план через z-index) */
 .filter-input {
