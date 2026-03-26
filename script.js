@@ -9,6 +9,7 @@ let mail = document.querySelector(".mail");
 let mailValue = "";
 
 button.disabled = true;
+button.style.backgroundColor = "#7c7c7c"
 
 if(name === 'order'){
     name = 'Заказываю';
@@ -21,6 +22,8 @@ if(name === 'order'){
 mail.addEventListener("input", function () {
    mailValue = mail.value.trim();
    button.disabled = !mail.validity.valid || !mailValue;
+   button.style.backgroundColor = mail.validity.valid ? "#d40000a9" : "#7c7c7c";
+   
 });
 
 
